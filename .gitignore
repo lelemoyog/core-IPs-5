@@ -8,6 +8,10 @@ gradle-app.setting
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+.gradlew
+settings.gradle
+gradlew.bat
+gradle/wrapper
 
 # Cache of project
 .gradletasknamecache
