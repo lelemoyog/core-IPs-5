@@ -8,6 +8,12 @@ a web application tha helps game rangers and researchers to keep track of animal
 * git init
 * git clone https://github.com/lelemoyog/core-IPs-5.git
 * and start using code
+##In PSQL:
+* CREATE DATABASE wildlife_tracker;
+* \c wildlife_tracker
+* CREATE TABLE animals (id serial PRIMARY KEY, name varchar);
+* CREATE DATABASE wildlife_tracker_test WITH TEMPLATE wildlife_tracker;
+
 ## Technologies Used
 * gradle
 * java
