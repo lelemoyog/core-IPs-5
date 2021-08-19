@@ -1,0 +1,20 @@
+{{#partial "content"}}
+<h1>Add Animal!</h1>
+<form action='/animals/new' method="post" style="width:40%;">
+ <div class="form-group">
+   <label for="animal">Animal species name</label>
+   <input id="animal" name="animal" class="form-control" type="text">
+ </div>
+ <label for="animal">this animal is endangered.</label>
+ <div class="form-check ">
+   <input class="form-check-input" type="radio" name="endangered" id="endangered" value="true">
+   <label class="form-check-label" for="endangered">true</label>
+ </div>
+ <div class="form-check ">
+   <input class="form-check-input" type="radio" name="endangered" id="endangered" value="false">
+   <label class="form-check-label" for="endangered">false</label>
+ </div>
+ <button type="submit" class="btn">track!</button>
+ </form>
+{{/partial}}
+{{> layout.hbs}}

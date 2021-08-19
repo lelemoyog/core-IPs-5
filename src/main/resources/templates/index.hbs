@@ -1,0 +1,29 @@
+{{#partial "content"}}
+<div class="container">
+
+    <h2>Tracked Animal list!</h2>
+
+<div>
+    {{#if animals}} <!--if posts exist, then -->
+        {{#each animal}} <!--loop-->
+            <ul>
+           <li><p>Animal name:{{ name }}</p> </li>
+           </ul><!--show-->
+        {{/each}}
+    {{else}} <!--no posts!-->
+    <p>no Tracked animals yet!</p>
+    {{/if}}
+    </div>
+    <div>
+    {{#if Sightings}} <!--if posts exist, then -->
+            {{#each Sighting}} <!--loop-->
+
+               <p> Animal:{{ AnimalName }}<br>Location:{{ location }}<br>Ranger:{{ ranger }} </p> <!--show-->
+            {{/each}}
+        {{else}} <!--no posts!-->
+        <p>no sightings yet!</p>
+        {{/if}}
+        </div>
+ </div>
+{{/partial}}
+{{> layout.hbs}}
