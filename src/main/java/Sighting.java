@@ -1,12 +1,8 @@
-import org.sql2o.Connection;
-
 import java.sql.Timestamp;
-import java.util.List;
 import java.util.Objects;
 
 public abstract class Sighting {
     public String animalSpecies;
-    public static int id;
     public int rangerId;
     public String location ;
     public Timestamp timeSpotted;
@@ -21,13 +17,9 @@ public abstract class Sighting {
         this.animalSpecies = animalSpecies;
     }
 
-    public static int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+
+
 
     public int getRangerId() {
         return rangerId;
@@ -63,20 +55,12 @@ public abstract class Sighting {
 
 
 
+
     @Override
     public int hashCode() {
         return Objects.hash(getAnimalSpecies(), getRangerId());
     }
 
-    public void save() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO sightings ( rangerId, location, timeSpotted, type) VALUES (:rangerId, :location, now(), :type)";
-            this.id = (int) con.createQuery(sql, true)
-                    .addParameter("rangerId", this.rangerId)
-                    .addParameter("location", this.location)
-                    .addParameter("type", this.type)
-                    .executeUpdate()
-                    .getKey();
-        }
-    }
+
+
 }
