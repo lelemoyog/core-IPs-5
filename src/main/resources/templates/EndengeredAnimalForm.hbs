@@ -1,0 +1,44 @@
+{{#partial "content"}}
+<h1>Add sighting!</h1>
+
+  <form action='/endangeredAnimals/new' method="post" style="width:40%;">
+       <div class="form-group">
+         <label for="animal">Animal species name</label>
+         <input id="animal" name="animal" class="form-control" type="text">
+       </div>
+       <div class="form-group">
+          <label for="location"> location</label>
+          <input id="location" name="location" class="form-control" type="text">
+       </div>
+       <div class="form-group">
+           <label for="ranger">ranger name</label>
+           <input id="ranger" name="ranger" class="form-control" type="text">
+       </div>
+       <div class="form-group">
+            <label for="rangerId">ranger Badge number</label>
+            <input id="rangerId" name="rangerId" class="form-control" type="number">
+       </div>
+
+
+       <label for="Health">Health status.</label>
+                               <select id="Health" name="Health">
+
+                                       <option value="healthy">Healthy</option>
+                                       <option value="ill">Ill</option>
+                                       <option value="okay">Okay</option>
+
+                               </select>
+
+
+            <label for="age">Age.</label>
+                        <select id="age" name="age">
+
+                                <option value="newborn">Newborn</option>
+                                <option value="young">Young</option>
+                                <option value="adult">Adult</option>
+
+                        </select>
+       <button type="submit" class="btn">Go!</button>
+       </form>
+{{/partial}}
+{{> layout.hbs}}
