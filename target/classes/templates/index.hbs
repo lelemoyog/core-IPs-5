@@ -1,0 +1,66 @@
+{{#partial "content"}}
+<div class="container">
+
+    <h2>Tracked Animal list!</h2>
+
+    <div>
+    {{#if Animals}} <!--if posts exist, then -->
+         <!--loop-->
+
+           <table class="table table-striped">
+                                       <thead class="thead-dark">
+                                           <th><h4>Animal:</h4></th>
+                                           <th><h4>Location:</h4></th>
+                                           <th><h4>When it spotted:</h4></th>
+                                       </thead>
+                                       <tbody>
+                                           {{#each Animals}}
+                                           <tr>
+                                               <td>{{ animalSpecies }}</td>
+                                               <td>{{ location }}</td>
+                                               <td>{{ timeSpotted }}</td>
+           {{!--                                     <td><a class="text-danger" href="/animals-delete/{{id}}"><span class="material-icons-outlined"> --}}
+           {{!--                                                 delete --}}
+           {{!--                                             </span></a></td> --}}
+                                           </tr>
+                                           {{/each}}
+                                       </tbody>
+                                   </table>
+           <!--show-->
+
+    {{else}} <!--no posts!-->
+    <p>no Tracked animals yet!</p>
+    {{/if}}
+    </div>
+    <div>
+    <h2>EndangeredAnimals</h2>
+    {{#if EndangeredAnimals}} <!--if posts exist, then -->
+
+
+            <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <th><h4>Animal:</h4></th>
+                                <th><h4>Location:</h4></th>
+                                <th><h4>When it spotted:</h4></th>
+                            </thead>
+                            <tbody>
+                                {{#each EndangeredAnimals}}
+                                <tr>
+                                    <td>{{ animalSpecies }}</td>
+                                    <td>{{ location }}</td>
+                                    <td>{{ timeSpotted }}</td>
+{{!--                                     <td><a class="text-danger" href="/animals-delete/{{id}}"><span class="material-icons-outlined"> --}}
+{{!--                                                 delete --}}
+{{!--                                             </span></a></td> --}}
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+
+        {{else}} <!--no posts!-->
+        <p>no sightings yet!</p>
+        {{/if}}
+        </div>
+     </div>
+{{/partial}}
+{{> layout.hbs}}

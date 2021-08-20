@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>{{#block "title"}}Wildlife tracker{{/block}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+   <link rel='stylesheet' href='public/app.css'>
+</head>
+<body>
+<div class="container">
+   <!--begin main template-->
+   <div class="page-header bg-light mb-0">
+   <h1 style="color:blue;text-align: center;">WILD LIFE TRACKER</h1>
+
+
+   </div>
+   <center>
+   <nav class="navbar navbar-light bg-light">
+     <a href="/" class="link-primary">Home</a>
+     <a href="/sightings/new" class="link-secondary">Track New Animal</a>
+     <a href="/endangeredAnimals/new" class="link-success">Track New EndangeredAnimal</a>
+   </nav>
+
+</center>
+
+<center>
+   <div class="col-md-12">
+       {{#block "content"}}
+
+       {{/block}}
+
+   </div>
+</center>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+<footer class="footer">
+<img class="animal1" src="https://tunza.eco-generation.org/file/desktop-hd-images-of-african-animals.jpg" alt = "">
+   </footer>
+   </body>
+   </html>
+{{/block}}
